@@ -5,6 +5,18 @@ terraform {
       version = "4.6.0"
     }
   }
+backend "azurerm" {
+	resource_group_name="terraform-grp"
+	storage_account_name="terraformstore45553443"
+	container_name="terraform-dev"
+	key="terraform.tfstate"
+  client_id = "f300f5aa-36bf-454c-866b-41cfa2d8f15b"
+  client_secret = "yHt8Q~ajgjz2Ru9pnX~Yh6t~~WhR5.1Ox~UeFbRW"
+  tenant_id = "38dbefc3-d57f-4955-b62c-1406e16a4ea8"
+  subscription_id = "387407e5-94af-45e7-b378-4d37af61c732"
+
+}
+
 }
 
 provider "azurerm" {
