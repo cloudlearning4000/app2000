@@ -22,6 +22,9 @@ resource "azurerm_public_ip" "public_ipaddress" {
   resource_group_name = var.resource_group_name
   location            = var.location
   allocation_method   = "Static"
+tags = {
+    "tier"="Tier3"
+  }
 }
 
 resource "azurerm_network_interface" "network_interfaces" {
